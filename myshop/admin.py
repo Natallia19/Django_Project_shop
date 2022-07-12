@@ -1,6 +1,5 @@
 # регистрируем нашу модель в каталоге
 from django.contrib import admin
-from PIL import Image
 from django.utils.safestring import mark_safe
 
 from .models import Category, Product

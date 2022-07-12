@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import path, re_path
 
 urlpatterns = [
+    #path('home/', name='home'),
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
-    path('', include('myshop.urls', namespace='shop'))
+    path('', include('myshop.urls', namespace='shop')),
+    re_path(r'^orders/', include('orders.urls', namespace='orders')),
+    re_path(r'^coupons/', include('coupons.urls', namespace='coupons')),
+
 ]
 
 if settings.DEBUG:

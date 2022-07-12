@@ -17,12 +17,13 @@ def product_list(request, category_slug=None):
                       'products': products
                   })
 
-
 # product_detail для отображения каждого товара в отдельном окне
 # обработчик
 # используя Slug мы генерируем хорошие для товара с точки зрения CEO ссылки
 # поисковые системы будут лучше индексировать сайт
 # после описания обработчиков необходимо сфоррмировать шаблон урлов
+
+
 def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
     cart_product_form = CartAddProductForm()

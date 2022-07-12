@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#59bb81;
+    color: #80037d;
 }
 
 a:hover {
@@ -20,8 +20,8 @@ a:hover {
 }
 
 a.button, input[type="submit"] {
-    color:#fff;
-    background:#59bb81;
+    color: #041242;
+    background: #59bb81;
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
@@ -29,8 +29,8 @@ a.button, input[type="submit"] {
 }
 
 a.button.light {
-    color:#666;
-    background:#ededed;
+    color: #041242;
+    background: #59bbb2;
 }
 
 .text-left {
@@ -55,16 +55,16 @@ table th, table td {
 }
 
 tbody tr:nth-child(odd) {
-    background:#efefef;
+    background: #ffffff;
 }
 
 tbody tr.subtotal {
-    background:#ccc;
+    background: #ffffff;
 }
 
 thead th, tbody tr.total {
     background:#59bb81;
-    color:#fff;
+    color: #08124b;
     font-weight:bold;
 }
 
@@ -174,7 +174,7 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected a {
-    color:#fff;
+    color: #162dab;
 }
 
 #main {

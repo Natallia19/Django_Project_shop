@@ -11,11 +11,11 @@
     <thead>
       <tr>
         <th>Картинка</th>
-        <th>Товар</th>
-        <th>Обновить кол-во</th>
+        <th>Блюдо</th>
+        <th>Обновить</th>
         <th>Удалить</th>
-        <th>Кол-во</th>
-        <th>Цена за шт</th>
+        <th>Число</th>
+        <th>Цена за штуку</th>
         <th>Общая стоимость</th>
       </tr>
     </thead>
@@ -41,20 +41,44 @@
             <td>
               {{ item.quantity }}
             </td>
-            <td class="num">${{ item.price }}</td>
-            <td class="num">${{ item.total_price }}</td>
+            <td class="num">{{ item.price }} BYN</td>
+            <td class="num">{{ item.total_price }} BYN</td>
           </tr>
         {% endwith %}
       {% endfor %}
-      <tr class="total">
-        <td>Всего</td>
+      {% if cart.coupon %}
+    <tr class="subtotal">
+        <td>Итого</td>
         <td colspan="4"></td>
-        <td class="num">${{ cart.get_total_price }}</td>
-      </tr>
+        <td class="num">{{ cart.get_total_price }} BYN</td>
+    </tr>
+    <tr>
+        <td>
+            "{{ cart.coupon.code }}" купон
+            ({{ cart.coupon.discount }}% скидка)
+        </td>
+        <td colspan="4"></td>
+        <td class="num neg">
+            -{{ cart.get_discount|floatformat:"2" }} BYN
+        </td>
+    </tr>
+{% endif %}
+<tr class="total">
+    <td>ВСЕГО</td>
+    <td colspan="4"></td>
+    <td class="num">
+        {{ cart.get_total_price_after_discount|floatformat:"2" }} BYN
+    </td>
+</tr>
     </tbody>
   </table>
+<form action="{% url "coupons:apply" %}" method="post">
+    {{ coupon_apply_form }}
+    <input type="submit" value="Применить">
+    {% csrf_token %}
+</form>
   <p class="text-right">
-    <a href="{% url 'shop:product_list' %}" class="button light">В магазин</a>
-    <a href="#" class="button">Оформить заказ</a>
+    <a href="{% url 'shop:product_list' %}" class="button light">Продолжить покупку</a>
+    <a href="{% url "orders:order_create" %}" class="button">Оформить заказ</a>
   </p>
 {% endblock %}

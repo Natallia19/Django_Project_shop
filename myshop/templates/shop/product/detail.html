@@ -11,7 +11,7 @@
 <h2>
 <a href="{{ product.category.get_absolute_url }}">{{product.category }}</a>
 </h2>
-<p class="price">${{ product.price }}</p>
+<p class="price">{{ product.price }} BYN</p>
               <form action="{% url 'cart:cart_add' product.id %}" method="post">
                 {{ cart_product_form }}
                   {% csrf_token %}
@@ -19,4 +19,5 @@
               </form>
 {{ product.description|linebreaks }}
 </div>
+    <div id="subheader"></div>
 {% endblock %}

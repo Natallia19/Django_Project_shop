@@ -3,20 +3,26 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>{% block title %}Мой магазин{% endblock %}</title>
+<title>{% block title %}FOODi{% endblock %}</title>
 <link href="{% static "css/base.css" %}" rel="stylesheet">
 </head>
 <body>
 <div id="header">
-<a href="/" class="logo">Radio Shack</a>
+    <a href="/" class="logo"><img src="/static/img/home.png" width="120" height="90" ></a>
+  <h3>
+      FOODi Restaurant - лучшие суши и пицца в Минске! Работаем ежедневно с 10:00 до 23:00!!!
+      <img src="/static/img/phone.jpg" width="30" height="30" > Доставка: 7751, +375 (25) 961 55 36
+      <img src="/static/img/mail.png" width="30" height="30" > foodi_restaurant@gmail.com
+  </h3>
+
 </div>
 <div id="subheader">
-     <div class="cart">
+     <div class="cart"><img src="/static/img/cart.png" width="30" height="30" >
          {% with total_items=cart|length %}
          {% if cart|length > 0 %}
          В корзине
          <a href="{% url 'cart:cart_detail' %}">
-             {{ total_items }} шт ${{ cart.get_total_price }}
+             {{ total_items }} шт {{ cart.get_total_price }} BYN
          </a>
          {% else %}
          Корзина пустая
@@ -24,8 +30,9 @@
          {% endwith %}
      </div>
 </div>
+
 <div id="content">
 {% block content %}{% endblock %}
 </div>
 </body>
-</html>>
+</html>
