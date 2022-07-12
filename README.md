@@ -1,4 +1,7 @@
-# Django_Project_shop
-![nVn1oGauuhGIjcHh5SOVJ_49x3Uw4jcf0CuaMuc3ys01pfNmwBAxQhqqKYuBaNi-1QL0eZ9Bn7zP33uMQ3c7l0CT](https://user-images.githubusercontent.com/51446578/167391493-042ad503-3705-405b-83c2-a2dbe789ad22.jpg)
-![zZnwZXALj4iDgKJimfJx7sZXxLQLqlhqCJ04tullmeIlVGEiZWpUvhEtukyn9PbYDNz6cwohxOHC4_L1K3_HmDCZ](https://user-images.githubusercontent.com/51446578/167391527-778cdeab-7b45-4755-9588-46aa5c5a9ebc.jpg)
-![MNTGA3gh6klFSEkRgGk0uQ8oLPsR-aHhOLAfh5iWem8GjFB7Uhdz3LmqFtJuhUeQSdUURpXfAdQUSAUEdwAqnoTt](https://user-images.githubusercontent.com/51446578/167391539-1c4e66ad-0751-41b8-998f-24ef7a40ba25.jpg)
+# Django_Project_restaurant_foodi
+![smpuS9VvCm4](https://user-images.githubusercontent.com/51446578/178461935-ab5d211e-3f12-45b8-88c0-b665c4620744.jpg)
+![hTK9n8P6v44](https://user-images.githubusercontent.com/51446578/178462009-44f781d3-b632-4e1e-a9c1-978f8dd36537.jpg)
+![Odt8dqGULow](https://user-images.githubusercontent.com/51446578/178462089-d8ccd37f-f304-4662-a250-b2fb3dd811e8.jpg)
+![D0-N0IRKoyc](https://user-images.githubusercontent.com/51446578/178462152-c31fb56b-1ec6-41f0-ba85-860cece5d8ba.jpg)
+![4FMAxQz-t3U](https://user-images.githubusercontent.com/51446578/178462192-bb5a1731-4133-4359-a052-059de3c3276d.jpg)
+![Sd_dSdJ_DB8](https://user-images.githubusercontent.com/51446578/178462271-cb11c020-111a-46d5-a5fe-e1a5fb1bb50e.jpg)
